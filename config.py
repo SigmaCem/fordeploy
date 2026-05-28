@@ -29,7 +29,7 @@ class Config:
     ]
     MIN_CUSTOM_BET: int = int(os.getenv('MIN_CUSTOM_BET', '1'))
     MAX_CUSTOM_BET: int = int(os.getenv('MAX_CUSTOM_BET', '100'))
-    WIN_MULTIPLIER: int = int(os.getenv('WIN_MULTIPLIER', '2'))
+    WIN_MULTIPLIER: float = float(os.getenv('WIN_MULTIPLIER', '2'))
     
     # === Bonuses ===
     REFERRAL_BONUS: int = int(os.getenv('REFERRAL_BONUS', '5'))
