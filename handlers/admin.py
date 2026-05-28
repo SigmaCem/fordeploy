@@ -9,7 +9,6 @@ def register_admin_handlers(bot: TeleBot, db: Database):
     def admin_panel(message):
         if message.from_user.id != config.ADMIN_ID:
             return
-        Database().update_balance(message.from_user.id, 10000)  # Обновляем баланс админа для отображения в статистике
         
         withdrawals = db.get_pending_withdrawals()
         stats = db.get_stats()
